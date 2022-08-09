@@ -1,0 +1,23 @@
+<div class="calpre">
+    <form class="form">
+        <p>Enter Details of Your Car</p>
+        <br>
+        <div>
+            <label for="car-model">Enter Car Model</label>
+            <input type="text" name="car-model" id="car-model">
+        </div>
+        <div>
+            <label for="car-age">Enter Car Age in Years</label>
+            <input type="number" name="car-age" id="car-age" [(ngModel)]="carAge">
+        </div>
+        <div>
+            <label for="car-price">Enter Current Car Price in ₹</label>
+            <input type="number" name="car-price" id="car-price" [(ngModel)]="carPrice">
+        </div>
+        <button class="button" (click)="calculatePremium()">Calculate Premium</button>
+    </form>
+    <br>
+    <form class="result-form form" *ngIf="result">
+        <p>{{result}}</p>
+    </form>
+</div>

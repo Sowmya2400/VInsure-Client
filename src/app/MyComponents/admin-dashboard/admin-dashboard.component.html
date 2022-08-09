@@ -1,0 +1,87 @@
+<app-header></app-header>
+<div class="dashboard-nav">
+    <div>
+      <div>
+        <img class="user-pic" src="../../../assets/img/user-avatar.png" alt="" />
+      </div>
+      <div>
+        <div>
+          <p><b>ID: </b>{{ adminId }}</p>
+          <p><b>Name: </b> {{ adminName }}</p>
+          <p><b>Email: </b> {{ email }}</p>
+          <p><b>Date of Birth: </b> {{ dateOfBirth }}</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div>
+      <button class="button" (click)="getCustomerList()">View Customers</button>
+      <br />
+      <button class="button" (click)="getClaims()">View Claims</button>
+      <br />
+      <button id="log-out-button" class="button" (click)="logOut()">
+        Logout
+      </button>
+    </div>
+</div>
+
+<!-- <div class="admin-dashboard-nav">
+    <div >
+        <div>
+            <img class="user-pic" src="../../../assets/img/user-avatar.png" alt="">
+        </div>
+        <div>
+            <div>
+                <p><b>Agent ID:</b>{{adminId}} </p>
+                <p><b>Agent Name: </b> {{adminName}}</p>
+                
+            </div>
+        </div>
+        <div class="admin-dasboard-content">
+           
+                <div *ngFor="let c of customerDisplay">
+                    <div class="policy">
+                      <ul>
+                        <li>{{c.customerId}}</li>
+                        <li>{{c.name}}</li>
+                        <li>{{c.email}}</li>
+                        <li>{{c.password}}</li>
+                        <li>{{c.dateOfBirth}}</li>
+                        <li>{{c.phone}}</li>
+                        <li>{{c.address}}</li>
+                        <li>{{c.aadharCard}}</li>
+                        <li>{{c.panCard}}</li>
+                        <li>{{c.policies}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <div>
+            <div class="admin-dasboard-content">
+           
+                <div *ngFor="let c of customerClaimDisplay">
+                    <div class="policy">
+                        <p>{{c.claimId}}</p>
+                        <p>{{c.policy}}</p>
+                        <p>{{c.claimDate}}</p>
+                       <p>{{c.claimReason}}</p>
+                       <p>{{c.approvalStatus}}</p>
+                        <p>{{c.claimAmount}}</p>
+                        
+                    </div>
+                </div>
+            </div>
+        <div>
+            <button class="button" (click)="customerList()">Customer List</button>
+            <br>
+            <button class="button" (click)="claims()">Claims</button>
+            <br>
+            <button id="log-out-button" class="button" (click)="logOut()">Logout</button>
+        </div>
+    </div>
+</div> -->
+
+<div class="dashboard-content">
+  <router-outlet> </router-outlet>
+</div>

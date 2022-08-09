@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="plans-container">
+    <p>Pay To Proceed</p>
+    <div class="plans">
+        <div class="plan-card">
+            <div>
+                <p><b>{{insuranceFor}} INSURANCE</b></p>
+                <br>
+                <p *ngIf="insuranceFor=='VEHICLE'; else Travel;"><b>Max Claim:</b> ₹{{maxClaim}} </p>
+                <ng-template #Travel><b>No of Members:</b> {{noOfMembers}} </ng-template>
+                <p>{{plan}} PLAN</p>
+                <br>
+                <br>
+                <div class="payment-mode form">
+                    <b>Credit/Debit Card Details</b><br/><br/>
+                    <div #nameElement>
+                        <label for="name" class="labels">Card Number:</label>
+                        <p class="input-error"></p>
+                        <input type="text" name="name" id="name" [(ngModel)]="cardNo" (blur)="onCard(nameElement)"
+                          (input)="onCard(nameElement)" maxlength="16"/>
+                      </div>
+                    <div #cvvelement>
+                        <label for="cvv" class="labels">CVV: </label>
+                        <p class="input-error"></p>
+                        <input type="text" name="cvv" id="cvv" [(ngModel)]="cvv" (blur)="onCVV(cvvelement)"
+                          (input)="onCVV(cvvelement)" maxlength="3"/>
+                    </div>
+                    <div #expiryelement>
+                        <label for="expiry" class="labels">Expiry Date</label>
+                        <p class="input-error"></p>
+                        <input type="text" name="expiry" id="expiry" [(ngModel)]="expiry" (blur)="onBlur(expiryelement)"
+                          (input)="onInput(expiryelement)" placeholder="MM/YY"/>
+                    </div>
+                </div>
+                <br/><br/><button class="button" (click)="pay()">{{buttonName}}</button>
+            </div>
+        </div>
+    </div>
+</div>

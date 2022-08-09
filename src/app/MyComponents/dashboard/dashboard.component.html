@@ -1,0 +1,72 @@
+<app-header [loggedIn]="true"></app-header>
+<!-- <div class="nav-bar">
+  <ul>
+    <li><img src="assets\img\userprof-modified.png" /></li>
+    <li><a href="#"> My Insurance Plans </a></li>
+    <li><a href="#"> Buy Insurance </a></li>
+    <li><a routerLink="child-a"> View All Plans </a></li>
+    <li><a href="#"> Renewal </a></li>
+    <li><a href="#"> Claim History </a></li>
+  </ul>
+</div> -->
+<!-- 
+<div class="dashboard-nav">
+    <div >
+        <div>
+            <img class="user-pic" src="../../../assets/img/user-avatar.png" alt="">
+        </div>
+        <div>
+            <div>
+                <p><b>Customer ID: </b>  {{customerId}}</p>
+                <p><b>Name: </b> {{name}}</p>
+                <p><b>Email: </b> {{email}}</p>
+                <p><b>Date of Birth: </b> {{dateOfBirth}}</p>
+            </div>
+        </div>
+        <div>
+            <button class="button" (click)="buyNewInsurance()">Buy New Insurance</button>
+            <br>
+            <button class="button" (click)="myInsurance()">My Insurance</button>
+            <br>
+            <button class="button" (click)="options()">Options</button>
+            <br>
+            <button id="log-out-button" class="button" (click)="logOut()">Logout</button>
+        </div>
+    </div>
+    <div>
+      
+    </div>
+</div> -->
+
+
+<div class="dashboard-nav">
+  <div>
+    <div>
+      <img class="user-pic" src="../../../assets/img/user-avatar.png" alt="" />
+    </div>
+    <div>
+      <div>
+        <p><b>Customer ID: </b>  {{customerId}}</p>
+        <p><b>Name: </b> {{name}}</p>
+        <p><b>Email: </b> {{email}}</p>
+        <p><b>Date of Birth: </b> {{dateOfBirth}}</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <div>
+    <button class="button" (click)="buyNewInsurance()">Buy New</button>
+            <br>
+            <button class="button" (click)="myInsurance()">My Insurance</button>
+            <br>
+            <button class="button" (click)="options()">Options</button>
+            <br>
+            <button id="log-out-button" class="button" (click)="logOut()">Logout</button>
+  </div>
+</div>
+
+
+<div class="dashboard-content">
+  <router-outlet> </router-outlet>
+</div>

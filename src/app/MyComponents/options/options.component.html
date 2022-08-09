@@ -1,0 +1,40 @@
+<form class="form">
+    <p>Change Details</p>
+    <br>
+    <div #nameElement>
+        <label for="name">Full Name</label><p class="input-error"></p>
+        <input type="text" name="name" id="name" [(ngModel)]="fullName" 
+          (blur)="nameCheck(nameElement)" (input)="nameCheck(nameElement)" />
+      </div>
+    <div #emailElement>
+        <label for="email">Email</label><p class="input-error"></p>
+        <input type="email" name="email" id="email" [(ngModel)]="email"  (blur)="emailCheck(emailElement)"
+          (input)="emailCheck(emailElement)" />
+      </div>
+      <div #passwordElement>
+        <label for="password">Password</label><p class="input-error"></p>
+        <input type="password" name="password" id="password" [(ngModel)]="password" 
+          (blur)="passwordCheck(passwordElement)" (input)="passwordCheck(passwordElement)" />
+      </div>
+      <div #dateOfBirthElement>
+        <label for="dob">Date of Birth</label><p class="input-error"></p>
+        <input type="date" name="dob" id="dob" [(ngModel)]="dateOfBirth"
+          (blur)="dateOfBirthCheck(dateOfBirthElement)" (input)="dateOfBirthCheck(dateOfBirthElement)" />
+      </div>
+      <div #contactNumberElement>
+        <label for="contact">Contact Number</label><p class="input-error"></p>
+        <input type="tel" name="contact" id="contact" maxlength="10" [(ngModel)]="contactNumber"
+          (blur)="phoneCheck(contactNumberElement)" (input)="phoneCheck(contactNumberElement)" />
+      </div>
+      <div #addressElement>
+        <label for="address">Address</label><p class="input-error"></p>
+        <textarea type="text" name="address" id="address" [(ngModel)]="address"
+          (blur)="addressCheck(addressElement)" (input)="addressCheck(addressElement)" rows="5" cols="60">
+        </textarea>
+      </div>
+      <div class="submit-button" #submitButtonElement>
+        <button type="submit" class="button"
+        (click)="onSubmit(submitButtonElement)">{{buttonName}}</button>
+      </div>
+      <br>
+</form>

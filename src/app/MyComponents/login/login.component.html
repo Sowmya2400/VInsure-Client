@@ -1,0 +1,41 @@
+<app-header [loggedIn]="true"></app-header>
+<div class="content">
+    <p>Login to your <b>{{title}}</b> account.</p>
+    <br>
+    <form class="form">
+        <p>Enter Your Details</p>
+        <br>
+        <br>
+        <div #usernameElement>
+            <label for="username">Email</label><p class="input-error"></p>
+            <input type="text" name="username" id="username" [(ngModel)]="username" 
+            (blur)="emailCheck(usernameElement)" (input)="emailCheck(usernameElement)">
+        </div>
+        <div #passwordElement>
+            <label for="password">Password</label><p class="input-error"></p>
+            <input type="password" name="password" id="password" [(ngModel)]="password" 
+            (blur)="passwordCheck(passwordElement)" (input)="passwordCheck(passwordElement)">
+        </div>
+        <div #termsElement>
+            <p class="checkbox-error"> </p>
+            <br>
+            <span>
+                <input class="checkbox" type="checkbox" name="keep-logged" id="keep-logged" [(ngModel)]="rememberMe">
+                <label for="keep-logged">Remember Me</label>
+                <a class="a" (click)="forgotPassword()" style="margin-left: auto;">Forgot Password</a>
+            </span>
+        </div>
+        <div class="submit-button" #submitButtonElement>
+            <button type="submit" class="button"
+            (click)="onSubmit(submitButtonElement)">Login</button>
+        </div>
+    </form>
+    <br>
+    <br>
+    <form class="form">
+        <p>Don't have an account?</p>
+        <button (click)="register()" class="button">Create new account</button>
+    </form>
+    <br>
+    <br>
+</div>

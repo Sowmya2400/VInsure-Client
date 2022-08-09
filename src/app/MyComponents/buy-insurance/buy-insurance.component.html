@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="buy-content-container">
+    <p>Select an Insurance Type To Proceed</p> 
+    <div class="buy-content">
+        <div>
+            <div class="insurance-type-img">
+                <img src="../../../assets/img/vehicle.png">
+            </div>
+            <div>
+                <p>This type of insurance is purchased for the vehicles. They cover damages for vehicles.</p>
+                <p><b>What is covered under our Motor Insurance?</b></p>
+                <ul>
+                    <li>Natural disasters like earthquakes, floods, fires and storms</li>
+                    <li>Theft and accidents</li>
+                    <li>Terrorist Activites</li>
+                    <li>Third-party legal liabilities cover</li>
+                </ul>
+            </div>
+            <button class="button" (click)="routeTo('vehicle')">Motor Insurance</button>
+        </div>
+        <div>
+            <div class="insurance-type-img">
+                <img src="../../../assets/img/travel.png">
+            </div>
+            <div>
+                <p>This type of insurance is purchased when you travel. They cover accidental deaths or damages to you due to travel.</p>
+                <p><b>What is covered under our Travel Insurance?</b></p>
+                <ul>
+                    <li>Total Loss of Checked-In Baggage</li>
+                    <li>Personal Accident</li>
+                    <li>Loss of Passport</li>
+                    <li>Trip Cancellation & Interruption</li>
+                    <li>Missed Flight Connection</li>
+                </ul>
+            </div>
+            <button class="button" (click)="routeTo('travel')">Travel Insurance</button>
+        </div>
+    </div>
+</div>

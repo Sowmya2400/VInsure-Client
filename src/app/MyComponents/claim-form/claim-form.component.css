@@ -1,0 +1,17 @@
+.claim-container{
+    width: fit-content;
+    margin: 20px auto;
+}
+.claim-container>p{
+    font-size: x-large;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+.claim-container>form{
+    margin-top: 50px;
+    width: 514px;
+}
+.claim-container>form>button{
+    margin-top: 10px;
+}

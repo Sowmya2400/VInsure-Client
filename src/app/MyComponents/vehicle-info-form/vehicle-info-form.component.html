@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="content">
+    <p>Enter Your Vehicle Details</p>
+    <br>
+    <form class="form">
+        <p>Fill the Details</p>
+        <br>
+        <br>
+        <div #VehicleManufacturerElement>
+            <label for="vehicle-manufacturer">Manufacturer</label><p class="input-error"></p>
+            <input type="text" name="vehicle-manufacturer" id="vehicle-manufacturer" [(ngModel)]="manufacturer" 
+            (blur)="reqAndLen(VehicleManufacturerElement,20)" (input)="reqAndLen(VehicleManufacturerElement,20)">
+        </div>
+        <div #ModelElement>
+            <label for="model">Model</label><p class="input-error"></p>
+            <input type="text" name="model" id="model" [(ngModel)]="model" 
+            (blur)="reqAndLen(ModelElement,15)" (input)="reqAndLen(ModelElement,15)">
+        </div>
+        <div #PurchaseDateElement>
+            <label for="purchase-date">Purchase Date</label><p class="input-error"></p>
+            <input type="date" name="purchase-date" id="purchase-date" [(ngModel)]="purchaseDate" 
+            (blur)="dateCheck(PurchaseDateElement)" (input)="dateCheck(PurchaseDateElement)">
+        </div>
+        <div #LicenseElement>
+            <label for="license-no">License No</label><p class="input-error"></p>
+            <input type="text" name="license-no" id="license-no" [(ngModel)]="licenseNo" 
+            (blur)="reqAndLen(LicenseElement,15)" (input)="reqAndLen(LicenseElement,15)">
+        </div>
+        <div #RegistrationElement>
+            <label for="registration-no">Registration No</label><p class="input-error"></p>
+            <input type="text" name="registration-no" id="registration-no" [(ngModel)]="registrationNo" 
+            (blur)="reqAndLen(RegistrationElement,15)" (input)="reqAndLen(RegistrationElement,15)">
+        </div>
+        <div #RegistrationFileElement>
+            <label for="registration-file-no">Registration Document</label><p class="input-error"></p>
+            <input type="file" name="registration-file-no" id="registration-file-no" (change)="onFileUpload($event)">
+        </div>
+        <div #EngineElement>
+            <label for="engine-no">Engine No</label><p class="input-error"></p>
+            <input type="text" name="engine-no" id="engine-no" [(ngModel)]="engineNo" 
+            (blur)="reqAndLen(EngineElement,15)" (input)="reqAndLen(EngineElement,15)">
+        </div>
+        <div #ChassisElement>
+            <label for="chassis-no">Chassis No</label><p class="input-error"></p>
+            <input type="text" name="chassis-no" id="chassis-no" [(ngModel)]="chassisNo" 
+            (blur)="reqAndLen(ChassisElement,15)" (input)="reqAndLen(ChassisElement,15)">
+        </div>
+        <div #PriceElement>
+            <label for="price-no">Price (₹)</label><p class="input-error"></p>
+            <input type="number" name="price-no" id="price-no" [(ngModel)]="price" 
+            (blur)="reqAndLen(PriceElement,0)" (input)="reqAndLen(PriceElement,0)">
+        </div>
+        <div class="submit-button" #submitButtonElement>
+            <button type="submit" class="button"
+            (click)="onSubmit(submitButtonElement)">Proceed</button>
+        </div>
+    </form>
+    <br>
+    <br>
+</div>

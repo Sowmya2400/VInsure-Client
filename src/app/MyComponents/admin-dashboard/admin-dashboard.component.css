@@ -1,0 +1,73 @@
+
+.user-pic{
+    display: block;
+    width: 180px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: contain;
+  }
+  .dashboard-nav{
+    width: fit-content;
+    box-sizing: border-box;
+    margin: auto;
+    /* border: 1px solid lightgray; */
+    padding: 20px;
+    background-color: rgb(247, 250, 255);
+    box-shadow: 1px 1px 20px lightgray;
+  }
+  .dashboard-nav>div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
+  /* .dashboard-nav>div>div{
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+  } */
+  /* .dashboard-nav>div>:first-child{
+    display: inline-flex;
+    width: 200px;
+    text-align: center;
+  } */
+  /* .dashboard-nav>div>:nth-child(2){
+    display: inline-flex;
+    box-sizing: border-box;
+    padding-left: 10px;
+    width: fit-content;
+    align-items:center;
+  }
+  .dashboard-nav>div>:nth-child(2)>div{
+    width: fit-content;
+  }
+  .dashboard-nav>div>:nth-child(2)>div>p{
+    display: block;
+    width: 100%;
+  }
+  .dashboard-nav>div>:last-child{
+    padding-left: 30px;
+  }*/
+  .dashboard-nav>:last-child>button{
+    width: 170px;
+    margin: 5px;
+    background-color: white;
+    color: black;
+  }
+  .dashboard-nav>:last-child>button:hover{
+    background-color: rgb(191, 223, 255)
+  }
+  .dashboard-nav>:last-child>button:active{
+    background-color: rgb(142, 198, 255)
+  }
+  
+  
+  .dashboard-content{
+    width: 100%;
+    max-width: 1024px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    /* border: 1px solid lightgray; */
+    padding: 20px;
+    /* background-color: rgb(247, 250, 255); */
+    box-shadow: 1px 1px 20px lightgray;
+  }

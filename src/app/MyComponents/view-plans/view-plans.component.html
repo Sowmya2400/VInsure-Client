@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="plans-container">
+    <p>Our Vehicle Insurance Plans</p>
+    <div class="plans">
+        <div class="plan-card">
+            <div>
+                <img src="../../../assets/img/platinum.jpg" alt="">
+                <p>Platinum</p>
+                <p>₹1000 + 2% of your vehicle's purchase amount </p>
+                <p>Add-ons covered under our Platinum Plan:</p>
+                <ul>
+                    <li>Emergency Assist</li>
+                    <li>Complete Care</li>
+                    <li>CNG Kit,LPG Kit etc</li>
+                </ul>
+            </div>
+            <button class="button" (click)="route('PLATINUM')"> Select </button>
+        </div>
+            
+        <div class="plan-card">
+            <div>
+                <img src="../../../assets/img/gold.jpg" alt="">
+                <p>Gold</p>
+                <p>₹600 + 2% of your vehicle's purchase amount </p>
+                <p>Add-ons covered under our Gold Plan:</p>
+                <ul>
+                    <li>Emergency Assist</li>
+                    <li>Complete Care</li>
+                </ul>
+            </div>
+            
+            <button class="button" (click)="route('GOLD')"> Select </button>
+        </div>
+        
+        <div class="plan-card">
+            <div>
+                <img src="../../../assets/img/silver.jpg" alt="">
+                <p>Silver</p>
+                <p>₹350 + 2% of your vehicle's purchase amount </p>
+                <p>Add-ons covered under our Silver Plan:</p>
+                <ul>
+                    <li>Emergency Assist</li>
+                </ul>
+            </div>
+            <button class="button" (click)="route('SILVER')"> Select </button>
+        </div>
+    </div>
+    <!-- <div >
+        <button class="button" (click)="route('payment')"> Proceed </button>
+    </div> -->
+</div>
+

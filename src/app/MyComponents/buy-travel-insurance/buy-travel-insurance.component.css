@@ -1,0 +1,14 @@
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+#selected,#plan-selected{
+    text-align: center;
+}
+#traveltype-notselected,#plan-notselected{
+    display: inline;
+    color: red;
+    font-weight: 200;
+}

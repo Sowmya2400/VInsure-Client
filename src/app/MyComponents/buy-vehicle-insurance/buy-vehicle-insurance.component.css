@@ -1,0 +1,19 @@
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.form{
+    max-width: 550px;
+}
+
+#selected-vehicleType,#selected-policyType,#plan-selected{
+    text-align: center;
+}
+#vehicletype-notselected,#policytype-notselected,#plan-notselected{
+    display: inline;
+    color: red;
+    font-weight: 200;
+}

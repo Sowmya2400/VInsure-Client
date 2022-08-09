@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div class="content">
+   
+    <form class="form"> 
+        <p>Enter the details of your travel</p><br/><br/>   
+        <div #traveltypeElement>
+            <div>Choose one:<span id="traveltype-notselected"></span></div><br/>
+            <ul>
+                <li><button class="button" (click)="onFamily()">Family</button></li>
+                <li><button class="button" (click)="onIndividual()">Individual</button></li>
+            </ul>
+            <p id="selected"></p>
+        </div><br/>
+
+        <div #departureDateElement> 
+            <label for="departureDate">Departure Date</label><p class="input-error"></p>
+            <input name="departureDate" type="date"id="departureDate" [(ngModel)]="departureDate" 
+            (blur)="onBlur(departureDateElement)" (input)="onBlur(departureDateElement)"
+            />
+        </div>
+
+        <div #returnDateElement> 
+            <label for="returnDate">Return Date</label><p class="input-error"></p>
+            <input name="returnDate" type="date"id="returnDate" [(ngModel)]="returnDate" 
+            (blur)="onBlur(returnDateElement)" (input)="onBlur(returnDateElement)"
+            [min]="departureDate"/>
+        </div>
+
+        <div #placeOfVisitElement> 
+            <label for="placeOfVisit">Place of Visit</label><p class="input-error"></p>
+            <input name="placeOfVisit" type="text" id="placeOfVisit" [(ngModel)]="placeOfVisit" 
+            (blur)="onBlur(placeOfVisitElement)" (input)="onBlur(placeOfVisitElement)"/>
+        </div>
+
+        <div #numberOfPeopleElement> 
+            <label for="numberOfPeople">Number Of People</label><p class="input-error"></p>
+            <input name="numberOfPeople" type="number"id="numberOfPeople" [(ngModel)]="numberOfPeople" 
+            (blur)="onBlur(numberOfPeopleElement)" (input)="onBlur(numberOfPeopleElement)"/>
+        </div>
+        <div #planElement>
+            <div>Choose your plan:<span id="plan-notselected"></span></div><br/>
+            <ul>
+                <li><button class="button" (click)="onPlatinum()">Platinum</button></li>
+                <li><button class="button" (click)="onGold()">Gold</button></li>
+                <li><button class="button" (click)="onSilver()">Silver</button></li>
+            </ul>
+            <p id="plan-selected"></p>
+        </div><br/>
+
+        <div class="submit-button" #submitButtonElement>
+            <button type="submit" class="button"
+            (click)="onSubmit(submitButtonElement)">Submit</button>
+        </div>
+    </form>
+
+
+</div>

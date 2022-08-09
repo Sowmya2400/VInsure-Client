@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="content">
+    <p>Enter Your Travel Details</p>
+    <br>
+    <form class="form">
+        <p>Fill the Details</p>
+        <br>
+        <br>
+        <div #DepartureDateElement>
+            <label for="departure-date">Departure Date</label><p class="input-error"></p>
+            <input type="date" name="departure-date" id="departure-date" [(ngModel)]="departureDate" 
+            (blur)="departureDateCheck(DepartureDateElement)" (input)="departureDateCheck(DepartureDateElement)">
+        </div>
+        <div #ArrivaleDateElement>
+            <label for="arrival-date">Arrival Date</label><p class="input-error"></p>
+            <input type="date" name="arrival-date" id="arrival-date" [(ngModel)]="arrivalDate" 
+            (blur)="arrivalDateCheck(ArrivaleDateElement)" (input)="arrivalDateCheck(ArrivaleDateElement)">
+        </div>
+        <div #TicketFileElement>
+            <label for="ticket-file-no">Ticket Document</label><p class="input-error"></p>
+            <input type="file" name="ticket-file-no" id="ticket-file-no" (change)="onFileUpload($event)">
+        </div>
+        <div #PlaceOfVisitElement>
+            <label for="place-of-visit-no">Place of Visit</label><p class="input-error"></p>
+            <input type="text" name="place-of-visit" id="place-of-visit" [(ngModel)]="placeOfVisit" 
+            (blur)="reqAndLen(PlaceOfVisitElement,15)" (input)="reqAndLen(PlaceOfVisitElement,15)">
+        </div>
+        <div #NoOfMembersElement>
+            <label for="no-of-members-no">No of Members</label><p class="input-error"></p>
+            <input type="number" name="no-of-members" id="no-of-members" [(ngModel)]="noOfMembers" 
+            (blur)="reqAndLen(NoOfMembersElement,2)" (input)="reqAndLen(NoOfMembersElement,2)">
+        </div>
+        <div class="submit-button" #submitButtonElement>
+            <button type="submit" class="button"
+            (click)="onSubmit(submitButtonElement)">Proceed</button>
+        </div>
+    </form>
+    <br>
+    <br>
+</div>

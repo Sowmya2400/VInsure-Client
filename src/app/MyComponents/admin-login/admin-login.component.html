@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="content">
+    <p>Agent Login  <b>{{title}}</b></p>
+    <br>
+    <form class="form">
+        <p>Agent Details</p>
+        <br>
+        <br>
+        <div #adminIdElement>
+            <label for="adminId">Agent Id</label><p class="input-error"></p>
+            <input type="text" name="adminId" id="adminId" [(ngModel)]="adminId" 
+            (blur)="onBlur(adminIdElement)" (input)="onInput(adminIdElement)">
+        </div>
+        <div #passwordElement>
+            <label for="password">Password</label><p class="input-error"></p>
+            <input type="password" name="password" id="password" [(ngModel)]="password" 
+            (blur)="onBlur(passwordElement)" (input)="onInput(passwordElement)">
+        </div>
+        <div #termsElement>
+            <p class="checkbox-error"> </p>
+            <br>
+            <span>
+                <input class="checkbox" type="checkbox" name="keep-logged" id="keep-logged" [(ngModel)]="rememberMe">
+                <label for="keep-logged">Remember Me</label>
+            </span>
+        </div>
+        <div class="submit-button" #submitButtonElement>
+            <button type="submit" class="button"
+            (click)="onSubmit(submitButtonElement)">Login</button>
+          </div>
+
+        
+        
+    </form>
+</div>
+

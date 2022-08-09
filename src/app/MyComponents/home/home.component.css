@@ -1,0 +1,149 @@
+.home-content{
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.why-insurance{
+    width: auto;
+    height: fit-content;
+    margin-right: 10px;
+    text-align: center;
+}
+.why-insurance>img{
+    width: 500px;
+    margin: auto;
+}
+.why-insurance>p{
+    padding: 20px 15px;
+    font-size: x-large;
+    text-align: center;
+    /* box-shadow: 2px 2px 20px lightgray; */
+}
+.home-links{
+    box-sizing: border-box;
+    width: 30px;
+    height: fit-content;
+    min-width: 300px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: 0;
+    box-shadow: 2px 2px 20px lightgray;
+}
+.home-links>a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    background: black;
+    width: 100%;
+    line-height: 80px;
+    text-align: center;
+    margin: 15px auto;
+    /* border-radius: 10px; */
+    box-shadow: 2px 2px 20px lightgray;
+    transition: .2s;
+}
+.home-links>a:hover{
+    /* background-color: rgb(85, 170, 255); */
+    background-color: dodgerblue;
+    transition: .2s;
+}
+.home-links>a:active{
+    background-color: rgb(7, 85, 163);
+    transition: .2s;
+}
+
+.why-insurance2{
+    /* border-top: 1px solid dodgerblue; */
+    width: 70%;
+    padding-top: 50px;
+    margin: 0px auto 0px auto;
+    text-align: center;
+}
+.why-insurance2>h2{
+    width: fit-content;
+    margin: 0px auto;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid dodgerblue;
+}
+.why-insurance2>div{
+    display: inline-flex;
+    margin: 20px auto;
+}
+.why-insurance2>div>p{
+    font-size: x-large;
+    width: fit-content;
+    margin: 10px 30px;
+    color: dodgerblue;
+}
+.why-insurance2>div>div{
+    width: fit-content;
+    margin: 20px auto;
+    padding: 0px 50px;
+    /* border: 1px solid dodgerblue; */
+}
+.why-insurance2>div>div>img{
+    width: auto;
+    height: 150px;
+    text-align: center;
+}
+.why-insurance2>div>div>h4{
+    font-size: x-large;
+    width: fit-content;
+    margin: 10px auto
+}
+.why-insurance2>div>div>p{
+    font-size: large;
+    width: fit-content;
+    margin: 10px auto
+}
+
+
+@media(max-width:850px){
+    .home-content{
+        display: block;
+        width: 100%;
+    }
+    .home-content>div{
+        width: 100%;
+        margin-top: 20px;
+        box-sizing: border-box;
+        /* border: 1px solid red; */
+    }
+    .why-insurance2{
+        padding-top: 0px;
+    }
+    .why-insurance2>div{
+        display: block;
+        margin: 50px auto;
+        /* border: 1px solid dodgerblue; */
+    }
+    .why-insurance2>div>p{
+        width: 100%;
+        text-align: center;
+        margin: 20px 0px;
+    }
+    .why-insurance2>div>div{
+        padding-bottom: 70px;
+        
+    }
+    .why-insurance2>div>div>h4{
+        width: 100%;
+        text-align: center;
+        margin: 20px 0px;
+    }
+    .why-insurance2>div>div>p{
+        width: 100%;
+        text-align: center;
+        margin: 20px 0px;
+    }
+    .why-insurance>img{
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+}

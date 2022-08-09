@@ -1,0 +1,91 @@
+<app-header></app-header>
+<div class="content">
+   
+    <form class="form"> 
+        <p>Enter the details of your vehicle</p><br/><br/>   
+        <div #policytypeElement>
+            <div>Choose one:<span id="policytype-notselected"></span></div><br/>
+            <ul>
+                <li><button class="button" (click)="onComprehensive()">Comprehensive</button></li>
+                <li><button class="button" (click)="onThirdParty()">Third Party</button></li>
+            </ul>
+            <p id="selected-policyType"></p>
+        </div><br/>
+        <div #vehicletypeElement>
+            <div>Choose one:<span id="vehicletype-notselected"></span></div><br/>
+            <ul>
+                <li><button class="button" (click)="on2Wheeler()">Two Wheeler</button></li>
+                <li><button class="button" (click)="on3Wheeler()">Three Wheeler</button></li>
+                <li><button class="button" (click)="on4Wheeler()">Four Wheeler</button></li>
+            </ul>
+            <p id="selected-vehicleType"></p>
+        </div><br/>
+
+        <div #vehicleCompanyElement> 
+            <label for="vehicleCompany">Vehicle Company</label>
+            <p class="input-error"></p>
+            <input name="vehicleCompany" type="text" id="vehicleCompany" [(ngModel)]="vehicleCompany" 
+            (blur)="onBlur(vehicleCompanyElement)" (input)="onBlur(vehicleCompanyElement)"/>
+        </div>
+
+        <div #vehicleModelElement> 
+            <label for="vehicleModel">Vehicle Model</label><p class="input-error"></p>
+            <input name="vehicleModel" type="text"id="vehicleModel" [(ngModel)]="vehicleModel" 
+            (blur)="onBlur(vehicleModelElement)" (input)="onBlur(vehicleModelElement)"/>
+        </div>
+
+        <div #purchaseDateElement> 
+            <label for="purchaseDate">Purchase Date</label><p class="input-error"></p>
+            <input name="purchaseDate" type="date"id="purchaseDate" [(ngModel)]="purchaseDate" 
+            (blur)="onBlur(purchaseDateElement)" (input)="onBlur(purchaseDateElement)"
+            />
+        </div>
+
+        <div #registrationNoElement> 
+            <label for="registrationNo">Registration Number</label><p class="input-error"></p>
+            <input name="registrationNo" type="text"id="registrationNo" [(ngModel)]="registrationNo" 
+            (blur)="onBlur(registrationNoElement)" (input)="onBlur(registrationNoElement)" maxlength="10"/>
+        </div>
+
+        <div #licenseNoElement> 
+            <label for="licenseNo">License Number</label><p class="input-error"></p>
+            <input name="licenseNo" type="text"id="licenseNo" [(ngModel)]="licenseNo" 
+            (blur)="onBlur(licenseNoElement)" (input)="onBlur(licenseNoElement)"/>
+        </div>
+
+        <div #engineNoElement> 
+            <label for="engineNo">Engine Number</label><p class="input-error"></p>
+            <input name="engineNo" type="text"id="engineNo" [(ngModel)]="engineNo" 
+            (blur)="onBlur(engineNoElement)" (input)="onBlur(engineNoElement)"/>
+        </div>
+
+        <div #chassisNoElement> 
+            <label for="chassisNo">Chassis Number</label><p class="input-error"></p>
+            <input name="chassisNo" type="text"id="chassisNo" [(ngModel)]="chassisNo" 
+            (blur)="onBlur(chassisNoElement)" (input)="onBlur(chassisNoElement)"/>
+        </div>
+
+        <div #purchaseAmountElement> 
+            <label for="purchaseAmount">Purchase Amount (₹)</label><p class="input-error"></p>
+            <input name="purchaseAmount" type="number"id="purchaseAmount" [(ngModel)]="purchaseAmount" 
+            (blur)="onBlur(purchaseAmountElement)" (input)="onBlur(purchaseAmountElement)"/>
+        </div>
+
+        <div #planElement>
+            <div>Choose your plan:<span id="plan-notselected"></span></div><br/>
+            <ul>
+                <li><button class="button" (click)="onPlatinum()">Platinum</button></li>
+                <li><button class="button" (click)="onGold()">Gold</button></li>
+                <li><button class="button" (click)="onSilver()">Silver</button></li>
+            </ul>
+            <p id="plan-selected"></p>
+        </div><br/>
+        
+        <div class="submit-button" #submitButtonElement>
+            <button type="submit" class="button"
+            (click)="onSubmit(submitButtonElement)">Submit</button>
+        </div>
+    </form>
+
+
+</div>

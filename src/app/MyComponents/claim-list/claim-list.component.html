@@ -1,0 +1,24 @@
+
+<div class="my-insurance-content">
+    <input class="search" type="number" name="search" id="search" [(ngModel)]="search" placeholder="Find Claims by ID">
+    <div *ngIf="!noClaims; else: NoClaims;">
+        <div *ngFor="let claims of claims">
+            <div></div>
+            <div class="policy" *ngIf="claims.claimId.includes(search) || !search">
+                <p><b>ClaimId:</b><br> {{claims.claimId}}</p>
+                <p><b>PolicyNo:</b><br> {{claims.policyNo}}</p>
+                <p><b>Claim Amount:</b><br> {{claims.claimAmount}}</p>
+                <p><b>Claim Date:</b><br> {{claims.claimDate}}</p>
+                <p><b>Claim Reason</b><br> {{claims.claimReason}}</p>
+                <p><b>Document</b><br><button class="button" (click)="viewFile(claims.registrationFile)">View File</button></p>
+                <!-- p><b>Document</b><br><a class="a" href=".toDataUrl({{claims.RegistrationFile}})" target="_blank"></a></p> -->
+                <button class="button" (click)="run('APPROVE',claims.claimId)" >Approve</button>
+                <button class="button"(click)="run('REJECT',claims.claimId)">Reject</button>
+            </div>
+        </div>
+    </div>
+    <ng-template #NoClaims>
+        <h3>{{errorMessage}}</h3>
+    </ng-template>
+    
+</div>

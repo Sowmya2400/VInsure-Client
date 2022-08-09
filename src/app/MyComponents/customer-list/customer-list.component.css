@@ -1,0 +1,38 @@
+
+.my-insurance-content>div{
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    height: 600px;
+    padding: 20px 0px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 1024px;
+    overflow-y: scroll;
+}
+.policy{
+    box-sizing: border-box;
+    display: inline-flex;
+    padding: 10px;
+    align-items: center;
+    width: fit-content;
+    margin: 10px auto;
+    background-color: rgb(240, 255, 255);
+}
+.policy>p{
+    margin: 0px 10px;
+    min-width: fit-content;
+    width: 100px;
+    height: 80px;
+    padding-right: 20px;
+    border-right: 1px solid lightgray;
+}
+.policy>button{
+    margin-right: 10px;
+}
+.search{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    margin-bottom: 10px;
+}

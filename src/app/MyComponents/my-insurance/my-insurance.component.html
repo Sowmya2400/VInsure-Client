@@ -1,0 +1,28 @@
+
+<div class="my-insurance-content">
+    <input class="search" type="number" name="search" id="search" [(ngModel)]="search" placeholder="Find Policy by Number">
+    <div *ngIf="!noPolicy; else: NoPolicy;">
+        
+        <div *ngFor="let policy of policies">
+            <div></div>
+            <div class="policy" *ngIf="policy.policyNumber.includes(search) || !search">
+                <p><b>Policy No:</b><br> {{policy.policyNumber}}</p>
+                <p><b>Issue Date:</b><br> {{policy.issueDate}}</p>
+                <p><b>Duration:</b><br> {{policy.duration}} Days</p>
+                <p><b>Plan:</b><br> {{policy.plan}}</p>
+                <p><b>Premium Price:</b><br> ₹{{policy.price}}</p>
+                <p><b>Insurance For:</b><br> {{policy.type}}</p>
+                <p><b>Max Claim:</b><br> ₹{{policy.maxClaim}}</p>
+                <p><b>Claim Status:</b><br> <button *ngIf="policy.approvalStatus==null; else approval;" class="button" value="{{policy.policyNumber}}" (click)="claim(claimButton)" #claimButton>Claim</button>
+                    <ng-template #approval><button class="disabled-button" #claimButton [disabled] >{{policy.approvalStatus}}</button></ng-template></p>
+                <button *ngIf="policy.type=='Vehicle'" class="button" value="{{policy.policyNumber}}" (click)="onRenew(renewButton)" #renewButton>Renew</button>
+               
+            </div>
+        </div>
+    </div>
+    <ng-template #NoPolicy>
+        <h3>{{errorMessage}}</h3>
+    </ng-template>
+    
+</div>
+

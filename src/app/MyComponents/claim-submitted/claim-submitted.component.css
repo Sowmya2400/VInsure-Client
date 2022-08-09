@@ -1,0 +1,17 @@
+.claim-container{
+    width: fit-content;
+    margin: 20px auto;
+    text-align: center;
+}
+.claim-container>img{
+    width: 500px;
+}
+.claim-container>p{
+    font-size: x-large;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+.claim-container>button{
+    margin-top: 30px;
+}

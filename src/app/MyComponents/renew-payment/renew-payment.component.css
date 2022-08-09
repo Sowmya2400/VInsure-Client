@@ -1,0 +1,29 @@
+.payment-mode{
+    text-align: left;
+}
+.plans-container{
+    width: fit-content;
+    margin: 20px auto;
+}
+.plans-container>p{
+    font-size: x-large;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+.plans-container>:last-child{
+    text-align: center;
+}
+.plans{
+    display: inline-flex;
+    /* border: 1px solid red; */
+}
+.plan-card{
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px lightgray;
+    width: 400px;
+    height: fit-content;
+    margin: 40px;
+    padding: 30px;
+    text-align: center;
+}

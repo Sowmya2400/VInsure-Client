@@ -1,0 +1,44 @@
+
+<app-header></app-header>
+<div class="plans-container">
+    <p>Pay To Proceed</p>
+    <div class="plans">
+        <div class="plan-card">
+            <div>
+                <p><b>PolicyNo:</b> {{policyNo}}</p>
+                <br>
+                <p><b>Price of Premium:</b> {{price}}</p>
+                <br>
+                <p><b>Vehicle Model:</b> {{vehicleCompany}} {{vehicleModel}}</p>
+                <br>
+                <p><b>License No:</b> {{licenseNo}}</p>
+                <br>
+                <p><b>Registration Number:</b> {{registrationNumber}}</p>
+                <br>
+                <br>
+                <div class="payment-mode form">
+                    <b>Credit/Debit Card Details</b><br/><br/>
+                    <div #nameElement>
+                        <label for="name" class="labels">Card Number:</label>
+                        <p class="input-error"></p>
+                        <input type="text" name="name" id="name" [(ngModel)]="cardNo" (blur)="onCard(nameElement)"
+                          (input)="onCard(nameElement)" maxlength="16"/>
+                      </div>
+                    <div #cvvelement>
+                        <label for="cvv" class="labels">CVV: </label>
+                        <p class="input-error"></p>
+                        <input type="text" name="cvv" id="cvv" [(ngModel)]="cvv" (blur)="onCVV(cvvelement)"
+                          (input)="onCVV(cvvelement)" maxlength="3"/>
+                    </div>
+                    <div #expiryelement>
+                        <label for="expiry" class="labels">Expiry Date</label>
+                        <p class="input-error"></p>
+                        <input type="text" name="expiry" id="expiry" [(ngModel)]="expiry" (blur)="onBlur(expiryelement)"
+                          (input)="onInput(expiryelement)" placeholder="MM/YY"/>
+                    </div>
+                </div>
+                <button class="button" (click)="onPay()">{{buttonName}}</button>
+            </div>
+        </div>
+    </div>
+</div>

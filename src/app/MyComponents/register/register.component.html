@@ -1,0 +1,91 @@
+<app-header></app-header>
+<div class="content">
+  <p>
+    Register on <b>{{ title }}</b> and secure your precious life with the best
+    insurance plans available for you.
+  </p>
+  <br />
+  <form class="form">
+    <p>Enter Your Details</p>
+    <br />
+    <div #nameElement>
+      <label for="name">Full Name</label>
+      <p class="input-error"></p>
+      <input type="text" name="name" id="name" [(ngModel)]="fullName" (blur)="nameCheck(nameElement)"
+        (input)="nameCheck(nameElement)" />
+    </div>
+
+    <div #emailElement>
+      <label for="email">Email</label>
+      <p class="input-error"></p>
+      <input type="email" name="email" id="email" [(ngModel)]="email" (blur)="emailCheck(emailElement); sendOtp()"
+        (input)="emailCheck(emailElement)" autocomplete="off"/>
+    </div>
+
+    <div #passwordElement>
+      <label for="password">Password</label>
+      <p class="input-error"></p>
+      <input type="password" name="password" id="password" [(ngModel)]="password"
+        (blur)="passwordCheck(passwordElement)" (input)="passwordCheck(passwordElement)" />
+    </div>
+
+    <div #cpasswordElement>
+      <label for="cpassword">Confirm Password</label>
+      <p class="input-error"></p>
+      <input type="password" name="cpassword" id="cpassword" [(ngModel)]="cpassword"
+        (blur)="cpasswordCheck(cpasswordElement)" (input)="cpasswordCheck(cpasswordElement);" />
+    </div>
+
+    <div #dateOfBirthElement>
+      <label for="dob">Date of Birth</label>
+      <p class="input-error"></p>
+      <input type="date" name="dob" id="dob" [(ngModel)]="dateOfBirth" (blur)="dateOfBirthCheck(dateOfBirthElement)"
+        (input)="dateOfBirthCheck(dateOfBirthElement)" />
+    </div>
+
+    <div #contactNumberElement>
+      <label for="contact">Contact Number</label>
+      <p class="input-error"></p>
+      <input type="tel" name="contact" id="contact" maxlength="10" [(ngModel)]="contactNumber"
+        (blur)="phoneCheck(contactNumberElement)" (input)="phoneCheck(contactNumberElement)" />
+    </div>
+
+    <div #addressElement>
+      <label for="address">Address</label>
+      <p class="input-error"></p>
+      <textarea type="text" name="address" id="address" [(ngModel)]="address" (blur)="addressCheck(addressElement)"
+        (input)="addressCheck(addressElement)" rows="5" cols="60">
+      </textarea>
+    </div>
+
+    <div #otpElement>
+      <label for="address">Enter OTP from Your Email</label>
+      <p class="input-error"></p>
+      <input type="number" name="otp" id="otp" [(ngModel)]="otp" (blur)="otpCheck(otpElement)"
+        (input)="otpCheck(otpElement)">
+    </div>
+
+    <div #termsElement>
+      <p class="checkbox-error"> </p>
+      <br>
+      <span>
+        <input class="checkbox" type="checkbox" name="terms" id="terms" value="terms-agreed" [(ngModel)]="terms"
+          (blur)="termsCheck(termsElement)">
+        <label for="terms">I Agree to the <a (click)="tnc()" class="a">{{title}} Services and Agreements.</a></label>
+      </span>
+    </div>
+
+    <div class="submit-button" #submitButtonElement>
+      <button type="submit" class="button" (click)="onSubmit(submitButtonElement)">{{buttonName}}</button>
+    </div>
+
+  </form>
+  <br>
+  <br>
+  <form class="form">
+    <p>Already having an account?</p>
+    <button (click)="login()" class="button">Login</button>
+  </form>
+  <br>
+  <br>
+</div>

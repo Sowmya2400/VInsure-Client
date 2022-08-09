@@ -1,0 +1,30 @@
+
+.about-us-content{
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 30px;
+}
+.about-us-content>p{
+  font-size: x-large;
+}
+.about-us-content>div{
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1024px;
+  margin: 20px auto;
+  /* box-shadow: 1px 1px 5px lightgray; */
+}
+.about-us-content>div>:nth-child(2){
+  font-size: x-large;
+}
+.about-us-content>div>:last-child{
+  margin-top: 50px;
+}
+.logo{
+  max-width: 256px;
+  margin-bottom: 30px;
+}
+
+
+

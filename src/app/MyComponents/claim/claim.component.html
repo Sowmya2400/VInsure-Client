@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="claim-container">
+    <p>Claim Your Policy</p>
+        <form class="form">
+            <!-- <p>Enter Policy Number</p> -->
+            <br>
+            <div #PolicyNumber>
+                <label for="policyNumber"> Enter Policy Number</label><p class="input-error"></p>
+                <input type="number" name="policyNumber" id="policyNumber" (blur)="checkPolicyExists(PolicyNumber); policyCheck(PolicyNumber);" (input)="policyCheck(PolicyNumber);" [(ngModel)]="policyNo">
+            </div>
+            
+            <button class="button" (click)="route(PolicyNumber)">Proceed</button>
+            <div style=" text-align: center; padding: 20px 0px;">
+                <a routerLink="/dashboard" class="a" >Don't know the policy number</a>
+            </div>
+        </form>
+        <br>
+        <br>
+</div>

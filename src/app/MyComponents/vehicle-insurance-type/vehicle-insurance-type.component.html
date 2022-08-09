@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="buy-content-container">
+    <p>Select Vehicle Insurance Type To Proceed</p> 
+    <div class="buy-content">
+        <div>
+            <div class="insurance-type-img">
+                <img src="../../../assets/img/comprehensive.jpg">
+            </div>
+            <div>
+                <p>Comprehensive insurance is insurance coverage that pays for the repair or replacement.</p>
+                <p><b>Comprehensive car insurance typically covers:</b></p>
+                <ul>
+                    <li>Tthird-party liabilities</li>
+                    <li>Damage from an accident</li>
+                    <li>Natural calamity</li>
+                    <li>Theft</li>
+                </ul>
+            </div>
+            <button class="button" (click)="run('COMPREHENSIVE')">Comprehensive</button>
+        </div>
+        <div>
+            <div class="insurance-type-img">
+                <img src="../../../assets/img/third-party.jpg">
+            </div>
+            <div>
+                <p>A Third-Party Liability Insurance offers financial cover to the insured person against any legal liability arising due to loss/damage caused to a third-party person or property.</p>
+                <p><b>It protects you if you are:</b></p>
+                <ul>
+                    <li>Sued</li>
+                    <li>Threatened to be sued</li>
+                </ul>
+            </div>
+            <button class="button" (click)="run('THIRDPARTY')">Third Party Liability</button>
+        </div>
+    </div>
+</div>

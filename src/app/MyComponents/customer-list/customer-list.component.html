@@ -1,0 +1,22 @@
+
+<div class="my-insurance-content">
+    <input class="search" type="number" name="search" id="search" [(ngModel)]="search" placeholder="Find Customer by ID">
+    <div *ngIf="!noCustomer; else: NoCustomer;">
+        <div *ngFor="let customer of customers">
+            <div></div>
+            <div class="policy" *ngIf="customer.customerId.includes(search) || !search">
+                <p><b>Customer ID:</b><br> {{customer.customerId}}</p>
+                <p><b>Name:</b><br> {{customer.name}}</p>
+                <p><b>Email:</b><br> {{customer.email}}</p>
+                <p><b>Phone:</b><br> {{customer.phone}}</p>
+                <p><b>Date of Birth:</b><br> {{customer.dateOfBirth}}</p>
+                <p><b>No of Policies:</b><br> {{customer.noOfPolicies}}</p>
+                <!-- <button class="button">Remove</button> -->
+            </div>
+        </div>
+    </div>
+    <ng-template #NoCustomer>
+        <h3>{{errorMessage}}</h3>
+    </ng-template>
+    
+</div>

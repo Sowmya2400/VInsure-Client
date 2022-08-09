@@ -1,0 +1,141 @@
+.buy-content-container{
+    width: fit-content;
+    margin: auto;
+}
+.buy-content-container>p{
+    font-size: x-large;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+.buy-content{
+    display: inline-flex;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    max-width: 1024px;
+    width: fit-content;
+    padding: 10px;
+}
+
+.buy-content>div{
+    /* border: 1px solid green; */
+    width: 514px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px lightgray;
+}
+.insurance-type-img>img{
+    height: 200px;
+}
+.buy-content>div>:nth-child(2){
+    /* border: 1px solid red; */
+    max-width: 514px;
+    height: 300px;
+    margin: auto;
+}
+.buy-content>div>:nth-child(2)>p{
+    font-size: large;
+    margin-bottom: 15px;
+}
+.buy-content>div>:nth-child(2)>:first-child{
+    margin-bottom: 30px;
+}
+.buy-content>div>:nth-child(2)>ul{
+    box-sizing: border-box;
+    margin: 10px;
+    list-style: none;
+    padding: 0px 10px;
+}
+.buy-content>div>:nth-child(2)>ul>li{
+    font-size: large;
+    font-weight: 300;
+    margin: 7px auto;
+    color: rgb(48, 48, 48);
+}
+
+@media(max-width:1030px){
+    .buy-content{
+        display: block;
+        width: 100%;
+    }
+    .buy-content>div{
+        box-sizing: border-box;
+        width: 100%;
+        margin: 30px auto;
+    }
+}
+
+
+
+
+
+/* .insurance-links{
+    box-sizing: border-box;
+    width: 350px;
+    height: fit-content;
+    min-width: 350px;
+    padding: 15px;
+    margin: 5% 35%;
+    box-shadow: 2px 2px 20px lightgray;
+}
+.insurance-links a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    background: black;
+    width: 100%;
+    line-height: 80px;
+    text-align: center;
+    margin: 15px auto;
+    box-shadow: 2px 2px 20px lightgray;
+    transition: .2s;
+}
+.insurance-links a:hover{
+    background-color: dodgerblue;
+    transition: .2s;
+}
+.insurance-links a:active{
+    background-color: rgb(7, 85, 163);
+    transition: .2s;
+}
+.insurance-half{
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    padding: 30px;
+    box-shadow: 0px 0px 20px lightgray;
+}
+.left-half{
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.right-half{
+    margin-top: 2%;
+    margin-left: 5%;
+}
+.insurance-quarter{
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+    padding: 1rem;
+}
+.insurance-quarter>div{
+    width: fit-content;
+    font-size: large;
+    margin: auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid dodgerblue;
+}
+.insurance-half>.insurance-links{
+    width: fit-content;
+    font-size: large;
+    margin: auto;
+    padding-bottom: 5px;
+}
+img{
+    width: 210px;
+    height: 200px;
+} */

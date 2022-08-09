@@ -1,0 +1,58 @@
+.plans-container{
+    width: fit-content;
+    margin: 20px auto;
+}
+.plans-container>p{
+    font-size: x-large;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+.plans-container>:last-child{
+    text-align: center;
+}
+.plans{
+    display: inline-flex;
+    /* border: 1px solid red; */
+}
+.plan-card{
+    box-sizing: border-box;
+    box-shadow: 1px 1px 5px lightgray;
+    width: 300px;
+    height: 500px;
+    margin: 40px;
+    padding: 20px;
+    text-align: center;
+}
+.plan-card>div{
+    height: 410px;
+}
+.plan-card>div>img{
+    height: 150px;
+}
+.plan-card>div>:nth-child(2){
+    font-size: large;
+    margin-bottom: 10px;
+}
+.plan-card>div>:nth-child(3){
+    font-size: medium;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.plan-card>div>ul{
+    box-sizing: border-box;
+    margin: 10px;
+    list-style: none;
+    padding: 0px 10px;
+}
+.plan-card>div>ul>li{
+    font-size: medium;
+    font-weight: 300;
+    margin: 2px auto;
+    color: rgb(48, 48, 48);
+}
+@media(max-width:1142px){
+    .plans{
+        display: block;
+    }
+}

@@ -1,0 +1,17 @@
+<div class="heading">
+    <a routerLink="" class="logo">
+      <img src="../../../assets/img/logo.png" alt="App logo" />
+      <h1>{{ title }}</h1>
+    </a>
+    <div class="header-links">
+        <a routerLink="/register" routerLinkActive="a" *ngIf="!loggedIn && !agentLoggedIn">Register</a>
+        <a routerLink="/login" routerLinkActive="a" *ngIf="!loggedIn && !agentLoggedIn; else dashboard">Login</a>
+      
+        <ng-template #dashboard>
+          <a routerLinkActive="a" routerLink="/dashboard" *ngIf="!agentLoggedIn">Dashboard</a>
+        </ng-template>
+        <a routerLinkActive="a" routerLink="/help">Help</a>
+        <a routerLinkActive="a" routerLink="/about-us">About Us</a>
+      </div>
+</div>
+

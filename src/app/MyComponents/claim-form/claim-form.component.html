@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="claim-container">
+    <p>Claim Your Policy</p>
+    <form class="form">
+        <p>Enter Details</p>
+        <br>
+        <div #Reason>
+            <label for="claim-reason">Enter Reason for Claim</label><p class="input-error"></p>
+            <input type="text" name="claimReason" id="claim-reason" [(ngModel)]=reason (blur)="nameCheck(Reason)" (input)="nameCheck(Reason)">
+        </div>
+        <div #Amount>
+            <label for="claim-amount">Enter Your Claim Amount (₹)</label><p class="input-error"></p>
+            <input type="number" name="claimAmount" id="claim-amount" [(ngModel)]="amount" (blur)="amountCheck(Amount)" (input)="amountCheck(Amount)">
+        </div>
+        <button class="button" (click)="route(Reason, Amount)">Submit</button>
+    </form>
+</div>
